@@ -1,0 +1,44 @@
+public class MyWorld extends World
+{
+    public MyWorld()
+    {    
+        super(600, 400, 1); 
+        prepare();
+    }
+    
+    
+    private void prepare()
+    {
+        Hewan hewan = new Hewan();
+        addObject(hewan,57,183);
+
+        ikan2 ikan2 = new ikan2();
+        addObject(ikan2,536,171);
+        ikan2.setLocation(98,262);
+        ikan2.setLocation(98,262);
+    }
+    
+}
+
+public class Hewan extends Actor
+{
+    public void act()
+    {
+        move(4);
+        if(isAtEdge()){
+            setLocation(0,getY());
+        }
+           
+    }
+}
+
+public class ikan2 extends Actor
+{
+    public void act()
+    {
+        move(8);
+        if(isAtEdge()){
+            setLocation(0,getY());
+        }
+    }
+}
